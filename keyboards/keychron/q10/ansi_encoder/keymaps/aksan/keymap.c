@@ -87,6 +87,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  _______,  _______,            _______,  _______,  _______,                       KC_0,               KC_RCTL,                       KC_HOME,  KC_PGDN,  KC_END),
 };
 
+// Chordal hold handedness
+const char chordal_hold_layout[MATRIX_ROWS][MATRIX_COLS] PROGMEM =
+    LAYOUT_ansi_89(
+        'L',  'L',  'L',  'L',  'L',  'L',  'L',  'L',  'R',  'R',  'R',  'R',  'R',  'R',  'R',        'R',
+        'L',  'L',  'L',  'L',  'L',  'L',  'L',  'L',  'R',  'R',  'R',  'R',  'R',  'R',  'R',        'R',
+        'L',  'L',  'L',  'L',  'L',  'L',  'L',  'R',  'R',  'R',  'R',  'R',  'R',  'R',  'R',        'R',
+        'L',  'L',  'L',  'L',  'L',  'L',  'L',  'R',  'R',  'R',  'R',  'R',  'R',        'R',        'R',
+        'L',  '*',        'L',  'L',  'L',  'L',  'L',  'L',  'R',  'R',  'R',  'R',  'R',  '*',  'R',
+        'L',  '*',  '*',        '*',  'L',  '*',              'R',        '*',              'R',  'R',  'R'
+    );
+
+// Per-chord customization
+bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record, uint16_t other_keycode, keyrecord_t* other_record) {
+    // Exceptionally allow some one-handed chords for hotkeys.
+    // Return true allows the chord to be held, while returning false settles as tapped.
+    switch (tap_hold_keycode) {
+        // case GUI_A:
+        // case LALT_T:
+        // case CTL_D:
+        // case SFT_F:
+
+        // case SFT_J:
+        // case CTL_K:
+        // case ALT_L:
+        // case GUI_SCLN:
+        //     break;
+    }
+    
+    // Otherwise defer to the opposite hands rule.
+    return get_chordal_hold_default(tap_hold_record, other_record);
+}
+
+
 #if defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [MAC_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },

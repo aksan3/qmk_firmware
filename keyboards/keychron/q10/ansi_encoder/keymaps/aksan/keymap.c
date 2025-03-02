@@ -119,6 +119,18 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record, u
     return get_chordal_hold_default(tap_hold_record, other_record);
 }
 
+// Define tapping term per key
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case TD_BSPC:
+            // Shorten tapping term for backspace tap dance, to make it easier to backspace single character
+            return 160;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
+
 
 #if defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {

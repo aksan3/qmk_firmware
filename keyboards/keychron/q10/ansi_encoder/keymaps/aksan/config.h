@@ -12,3 +12,10 @@
 #define CAPS_WORD_IDLE_TIMEOUT 3000 // in ms
 // Temporarily un-shift characters in the middle of caps word
 #define CAPS_WORD_INVERT_ON_SHIFT
+
+// Set threshold for holding key to get shifted state
+#define AUTO_SHIFT_TIMEOUT 150 // in ms
+// Allow shifted state to repeat by holding key beyond AUTO_SHIFT_TIMEOUT
+#define AUTO_SHIFT_REPEAT
+// Do not auto shift alpha characters due to HRM
+#define NO_AUTO_SHIFT_ALPHA

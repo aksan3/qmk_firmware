@@ -7,3 +7,8 @@
 
 #define PERMISSIVE_HOLD
 #define CHORDAL_HOLD
+
+// Timeout for caps word to turn off when no keys are pressed
+#define CAPS_WORD_IDLE_TIMEOUT 3000 // in ms
+// Temporarily un-shift characters in the middle of caps word
+#define CAPS_WORD_INVERT_ON_SHIFT

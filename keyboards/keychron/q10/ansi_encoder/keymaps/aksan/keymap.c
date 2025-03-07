@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,       KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,      KC_LBRC,  KC_RBRC,  KC_BSLS,            KC_PGDN,
         _______,  CW_TOGG,  GUI_A,    ALT_S,    CTL_D,    SFT_F,    KC_G,       KC_H,     SFT_J,    CTL_K,    ALT_L,    GUI_SCLN,  KC_QUOT,            KC_ENT,             KC_HOME,
         _______,  KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,       KC_B,     KC_B,     KC_N,     KC_M,     KC_COMM,   KC_DOT,   KC_SLSH,  KC_RSFT,  KC_UP,
-        _______,  KC_LCTL,  KC_LWIN,            KC_LALT,  TD_BSPC,  MO(WIN_FN),                     KC_SPC,             KC_RALT,                       KC_LEFT,  KC_DOWN,  KC_RGHT),
+        _______,  KC_LCTL,  KC_LWIN,            KC_LALT,  KC_SPC,   MO(WIN_FN),                     KC_SPC,             KC_RALT,                       KC_LEFT,  KC_DOWN,  KC_RGHT),
 
     [WIN_FN] = LAYOUT_ansi_89(
         RM_TOGG,  QK_BOOT,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FLXP,  RM_VALD,   RM_VALU,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,   KC_VOLU,  KC_PSCR,            _______,

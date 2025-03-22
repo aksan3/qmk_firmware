@@ -19,3 +19,6 @@
 #define AUTO_SHIFT_REPEAT
 // Do not auto shift alpha characters due to HRM
 #define NO_AUTO_SHIFT_ALPHA
+
+// Time that must elapse for tap-hold keys to register as hold
+#define TAP_FLOW_TERM  1000 // in ms
